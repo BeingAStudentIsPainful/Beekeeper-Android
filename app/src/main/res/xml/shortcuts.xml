@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Capability for Creating a Log Entry -->
+    <capability android:name="actions.intent.CREATE_NOTE">
+        <!-- Define how this capability is fulfilled -->
+        <intent
+            android:targetClass="com.example.beekeeper.LogActionHandlerActivity"
+            android:targetPackage="com.example.beekeeper">
+            <!-- Map the built-in intent's parameter 'text' to an extra in our intent -->
+            <parameter
+                android:name="note.text"
+                android:key="log_text" />
+            <!-- Note: We are using our custom 'log_text' key defined in LogActionHandlerActivity -->
+        </intent>
+        <!-- No <fulfillment> or URL template needed here -->
+        <!-- We can add fallbacks if needed -->
+    </capability>
+
+    <!-- Capability for Reading the Last Log Entry -->
+    <capability android:name="actions.intent.GET_NOTE">
+        <intent
+            android:targetClass="com.example.beekeeper.LogActionHandlerActivity"
+            android:targetPackage="com.example.beekeeper">
+            <!-- No parameters needed from the BII for reading the *last* log -->
+        </intent>
+        <!-- The Activity itself will handle getting the note -->
+    </capability>
+
+    <!-- You could still define custom intents here if needed using
+         <capability android:name="custom.actions.intent.CREATE_LOG">
+             <intent ...>
+                <parameter android:name="log_content" android:key="log_text" />
+             </intent>
+             <parameter android:name="log_content">
+                <data android:mimeType="text/*"/>
+             </parameter>
+         </capability>
+         But using BIIs is recommended when possible.
+     -->
+
+</shortcuts>
