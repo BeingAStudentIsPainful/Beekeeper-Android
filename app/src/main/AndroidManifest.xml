@@ -9,46 +9,47 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Beekeeper"
-        >
-
-        <meta-data
-            android:name="android.app.shortcuts"
-            android:resource="@xml/shortcuts" />
-
-        <!-- Your main launcher activity -->
+        android:theme="@style/Theme.Beekeeper">
         <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
-        <!-- Declare the LogActionHandlerActivity -->
+        <meta-data
+            android:name="android.app.shortcuts"
+            android:resource="@xml/shortcuts" /> <!-- Declare the LogActionHandlerActivity -->
         <!-- 'exported' is true because it's launched by Assistant (another app) -->
         <!-- 'theme' makes the activity appear invisible -->
         <activity
             android:name=".LogActionHandlerActivity"
-            android:exported="true"
             android:excludeFromRecents="true"
-            android:taskAffinity="" >
-            <!-- No VIEW/DEEP LINK intent filter needed here for App Actions fulfillment
+            android:exported="true"
+            android:taskAffinity="">
+
+            <!--
+                 No VIEW/DEEP LINK intent filter needed here for App Actions fulfillment
                  when using targetClass in shortcuts.xml. If you need deep links
                  for other purposes, you would add a separate <intent-filter>.
             -->
             <!-- You might still need filters if directly calling custom actions -->
-            <!-- <intent-filter>
+            <!--
+            <intent-filter>
                 <action android:name="com.example.beekeeper.actions.CREATE_LOG" />
                 <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter> -->
-            <!-- <intent-filter>
+            </intent-filter>
+            -->
+            <!--
+             <intent-filter>
                  <action android:name="com.example.beekeeper.actions.READ_LOG" />
                  <category android:name="android.intent.category.DEFAULT" />
-             </intent-filter> -->
+             </intent-filter>
+            -->
         </activity>
-
     </application>
 
 </manifest>
