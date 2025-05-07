@@ -15,39 +15,28 @@
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
 
         <meta-data
             android:name="android.app.shortcuts"
-            android:resource="@xml/shortcuts" /> <!-- Declare the LogActionHandlerActivity -->
+            android:resource="@xml/shortcuts" />
+
+        <!-- Declare the LogActionHandlerActivity -->
         <!-- 'exported' is true because it's launched by Assistant (another app) -->
-        <!-- 'theme' makes the activity appear invisible -->
+        <!-- Use a translucent theme to make the activity appear invisible -->
         <activity
             android:name=".LogActionHandlerActivity"
             android:excludeFromRecents="true"
             android:exported="true"
-            android:taskAffinity="">
+            android:taskAffinity=""
+            android:theme="@android:style/Theme.Translucent.NoTitleBar">
 
             <!--
                  No VIEW/DEEP LINK intent filter needed here for App Actions fulfillment
                  when using targetClass in shortcuts.xml. If you need deep links
                  for other purposes, you would add a separate <intent-filter>.
-            -->
-            <!-- You might still need filters if directly calling custom actions -->
-            <!--
-            <intent-filter>
-                <action android:name="com.example.beekeeper.actions.CREATE_LOG" />
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-            -->
-            <!--
-             <intent-filter>
-                 <action android:name="com.example.beekeeper.actions.READ_LOG" />
-                 <category android:name="android.intent.category.DEFAULT" />
-             </intent-filter>
             -->
         </activity>
     </application>
