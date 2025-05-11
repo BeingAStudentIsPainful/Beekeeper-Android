@@ -8,7 +8,7 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.beekeeper"
+        applicationId = "com.bachelorthesis.beekeeper"
         minSdk = 34
         targetSdk = 35
         versionCode = 1
