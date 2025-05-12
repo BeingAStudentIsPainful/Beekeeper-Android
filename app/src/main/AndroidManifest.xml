@@ -39,6 +39,10 @@
                  for other purposes, you would add a separate <intent-filter>.
             -->
         </activity>
+
+        <meta-data
+            android:name="com.google.android.actions"
+            android:resource="@xml/actions" />
     </application>
 
 </manifest>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<actions xmlns:android="http://schemas.android.com/apk/res/android">
+    <action intentName="actions.intent.CREATE_NOTE">
+        <fulfillment urlTemplate="app://com.example.beekeeper/create_log{?log_text}">
+            <parameter-mapping
+                intentParameter="note.text"
+                urlParameter="log_text" />
+        </fulfillment>
+
+        <!-- Define the intent to handle fulfillment in your app -->
+        <fulfillment
+            fulfillmentMode="actions.fulfillment.SLICE"
+            urlTemplate="https://your-app-domain.com/create_log{?text}">
+            <intent
+                android:targetClass="com.example.beekeeper.LogActionHandlerActivity"
+                android:targetPackage="com.example.beekeeper">
+                <parameter
+                    android:name="note.text"
+                    android:key="log_text" />
+            </intent>
+        </fulfillment>
+    </action>
+
+    <action intentName="actions.intent.GET_NOTE">
+        <fulfillment
+            fulfillmentMode="actions.fulfillment.SLICE"
+            urlTemplate="https://your-app-domain.com/get_last_log">
+            <intent
+                android:targetClass="com.example.beekeeper.LogActionHandlerActivity"
+                android:targetPackage="com.example.beekeeper">
+                <!-- No parameters needed from the BII for reading the *last* log -->
+            </intent>
+        </fulfillment>
+    </action>
+</actions> 
