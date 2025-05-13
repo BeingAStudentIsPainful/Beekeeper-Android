@@ -27,7 +27,7 @@
         <!-- 'exported' is true because it's launched by Assistant (another app) -->
         <!-- Use a translucent theme to make the activity appear invisible -->
         <activity
-            android:name=".LogActionHandlerActivity"
+            android:name="com.example.beekeeper.LogActionHandlerActivity"
             android:excludeFromRecents="true"
             android:exported="true"
             android:taskAffinity=""
@@ -39,10 +39,6 @@
                  for other purposes, you would add a separate <intent-filter>.
             -->
         </activity>
-
-        <meta-data
-            android:name="com.google.android.actions"
-            android:resource="@xml/actions" />
     </application>
 
 </manifest>
