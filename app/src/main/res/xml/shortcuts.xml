@@ -27,6 +27,30 @@
         <!-- The Activity itself will handle getting the note -->
     </capability>
 
+    <!-- Capability for Opening a Test Feature -->
+    <capability android:name="actions.intent.OPEN_APP_FEATURE">
+        <intent
+            android:targetClass="com.example.beekeeper.MainActivity"
+            android:targetPackage="com.bachelorthesis.beekeeper">
+            <!-- Map the BII 'feature' parameter to an intent extra -->
+            <parameter
+                android:name="feature"
+                android:key="app_action_feature_name" />
+        </intent>
+    </capability>
+
+    <!-- Custom Action for Testing -->
+    <capability android:name="custom.actions.intent.TEST_ACTION">
+        <intent
+            android:targetClass="com.example.beekeeper.MainActivity"
+            android:targetPackage="com.bachelorthesis.beekeeper">
+            <parameter android:name="test_phrase" android:key="test_phrase_value" />
+        </intent>
+        <parameter name="test_phrase">
+            <data android:mimeType="text/*"/>
+        </parameter>
+    </capability>
+
     <!-- You could still define custom intents here if needed using
          <capability android:name="custom.actions.intent.CREATE_LOG">
              <intent ...>

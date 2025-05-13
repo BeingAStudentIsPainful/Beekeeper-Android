@@ -11,7 +11,7 @@ android {
         applicationId = "com.bachelorthesis.beekeeper"
         minSdk = 34
         targetSdk = 35
-        versionCode = 3
+        versionCode = 5
         versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
@@ -36,7 +36,6 @@ android {
 }
 
 dependencies {
-
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
     implementation(libs.material)
