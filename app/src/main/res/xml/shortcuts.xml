@@ -2,8 +2,8 @@
 <shortcuts xmlns:android="http://schemas.android.com/apk/res/android">
     <capability android:name="actions.intent.CREATE_NOTE">
         <intent
-            android:targetClass="com.example.beekeeper.ActionHandlerActivity"
-            android:targetPackage="com.example.beekeeper">
+            android:targetClass="com.bachelorthesis.beekeeper.ActionHandlerActivity"
+            android:targetPackage="com.bachelorthesis.beekeeper">
             <parameter
                 android:name="note.text"
                 android:key="log_text_param" />

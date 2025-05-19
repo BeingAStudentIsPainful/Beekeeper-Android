@@ -1,4 +1,4 @@
-package com.example.beekeeper // Your package name
+package com.bachelorthesis.beekeeper // Your package name
 
 import android.content.Intent
 import android.os.Bundle

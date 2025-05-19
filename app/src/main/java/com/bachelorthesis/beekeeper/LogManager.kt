@@ -1,4 +1,4 @@
-package com.example.beekeeper // Your package name
+package com.bachelorthesis.beekeeper // Your package name
 
 import android.content.Context
 import android.content.SharedPreferences

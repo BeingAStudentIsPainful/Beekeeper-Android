@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.beekeeper"
+    namespace = "com.bachelorthesis.beekeeper"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.beekeeper"
+        applicationId = "com.bachelorthesis.beekeeper"
         minSdk = 34
         targetSdk = 35
         versionCode = 10

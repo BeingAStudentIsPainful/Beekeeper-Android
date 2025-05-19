@@ -12,7 +12,7 @@
         android:theme="@style/Theme.Beekeeper">
 
         <activity
-        android:name="com.example.beekeeper.MainActivity"
+        android:name="com.bachelorthesis.beekeeper.MainActivity"
         android:exported="true">
         <intent-filter>
             <action android:name="android.intent.action.MAIN" />
@@ -21,7 +21,7 @@
     </activity>
 
         <activity
-            android:name="com.example.beekeeper.ActionHandlerActivity"
+            android:name="com.bachelorthesis.beekeeper.ActionHandlerActivity"
             android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:taskAffinity=""
