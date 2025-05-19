@@ -11,4 +11,14 @@
         </intent>
     </capability>
 
+    <capability android:name="actions.intent.OPEN_APP_FEATURE">
+        <intent
+            android:targetClass="com.bachelorthesis.beekeeper.MainActivity"
+            android:targetPackage="com.bachelorthesis.beekeeper">
+            <parameter
+                android:name="feature"
+                android:key="feature_to_open" />
+        </intent>
+    </capability>
+
 </shortcuts>
