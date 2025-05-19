@@ -10,35 +10,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Beekeeper">
+
         <activity
-            android:name="com.example.beekeeper.MainActivity"
-            android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+        android:name="com.example.beekeeper.MainActivity"
+        android:exported="true">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+    </activity>
+
+        <activity
+            android:name="com.example.beekeeper.ActionHandlerActivity"
+            android:exported="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:taskAffinity=""
+            android:excludeFromRecents="true" />
 
         <meta-data
             android:name="android.app.shortcuts"
             android:resource="@xml/shortcuts" />
 
-        <!-- Declare the LogActionHandlerActivity -->
-        <!-- 'exported' is true because it's launched by Assistant (another app) -->
-        <!-- Use a translucent theme to make the activity appear invisible -->
-        <activity
-            android:name="com.example.beekeeper.LogActionHandlerActivity"
-            android:excludeFromRecents="true"
-            android:exported="true"
-            android:taskAffinity=""
-            android:theme="@android:style/Theme.Translucent.NoTitleBar">
-
-            <!--
-                 No VIEW/DEEP LINK intent filter needed here for App Actions fulfillment
-                 when using targetClass in shortcuts.xml. If you need deep links
-                 for other purposes, you would add a separate <intent-filter>.
-            -->
-        </activity>
     </application>
-
 </manifest>

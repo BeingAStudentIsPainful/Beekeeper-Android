@@ -8,10 +8,10 @@ android {
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.bachelorthesis.beekeeper"
+        applicationId = "com.example.beekeeper"
         minSdk = 34
         targetSdk = 35
-        versionCode = 5
+        versionCode = 10
         versionName = "1.0.1"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
