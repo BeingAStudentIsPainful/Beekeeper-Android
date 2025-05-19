@@ -12,17 +12,7 @@
         android:theme="@style/Theme.Beekeeper">
 
         <activity
-        android:name="com.bachelorthesis.beekeeper.MainActivity"
-        android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
-
-        <activity
-            android:name="com.bachelorthesis.beekeeper.ActionHandlerActivity"
-            android:exported="true"
+            android:name="com.bachelorthesis.beekeeper.ActionHandlerActivity" android:exported="true"
             android:theme="@android:style/Theme.Translucent.NoTitleBar"
             android:taskAffinity=""
             android:excludeFromRecents="true" />
